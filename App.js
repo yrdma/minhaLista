@@ -41,8 +41,8 @@ export default function App() {
         data={dados}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <View>
-            <Text>{item.title}</Text>
+          <View style={styles.card}>
+            <Text style={styles.title}>{item.title}</Text>
             <Text>{item.body}</Text>
           </View>
         )}
@@ -53,8 +53,21 @@ export default function App() {
 }
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    paddingTop: 20,
+    paddingHorizontal: 10
 
   },
+  card: {
+    backgroundColor: '#f2f2f2',
+    padding: 10,
+    marginBottom: 10,
+    borderRadius: 5
+  },
+  title: {
+    fontWeight: 'bold',
+    marginBottom: 10
+  }
 });
 
 
